@@ -152,6 +152,56 @@ const cards = [
     ],
     [
         {
+            word: 'big',
+            translation: 'спорить',
+            image: 'img/big.jpg',
+            audioSrc: 'audio/big.mp3'
+        },
+        {
+            word: 'small',
+            translation: 'строить',
+            image: 'img/small.jpg',
+            audioSrc: 'audio/small.mp3'
+        },
+        {
+            word: 'fast',
+            translation: 'заботиться',
+            image: 'img/fast.jpg',
+            audioSrc: 'audio/fast.mp3'
+        },
+        {
+            word: 'slow',
+            translation: 'ловить',
+            image: 'img/slow.jpg',
+            audioSrc: 'audio/slow.mp3'
+        },
+        {
+            word: 'friendly',
+            translation: 'водить машину',
+            image: 'img/friendly.jpg',
+            audioSrc: 'audio/friendly.mp3'
+        },
+        {
+            word: 'unfriendly',
+            translation: 'падать',
+            image: 'img/unfriendly.jpg',
+            audioSrc: 'audio/unfriendly.mp3'
+        },
+        {
+            word: 'young',
+            translation: 'тянуть',
+            image: 'img/young.jpg',
+            audioSrc: 'audio/young.mp3'
+        },
+        {
+            word: 'old',
+            translation: 'толкать',
+            image: 'img/old.jpg',
+            audioSrc: 'audio/old.mp3'
+        }
+    ],
+    [
+        {
             word: 'cat',
             translation: 'кот',
             image: 'img/cat.jpg',
@@ -210,7 +260,7 @@ const cards = [
         {
             word: 'fish',
             translation: 'рыба',
-            image: 'img/fish1.jpg',
+            image: 'img/fish.jpg',
             audioSrc: 'audio/fish.mp3'
         },
         {
