@@ -11,7 +11,6 @@ function App(props) {
         <div className="App">
             <Header/>
             <div className='app-wrapper-content'>
-
                 <Route exact path="/" render={() => <Main/>}/>
                 <Route path="/card1" render={() => <Card card={cards[1]}/>}/>
                 <Route path="/card2" render={() => <Card card={cards[2]}/>}/>

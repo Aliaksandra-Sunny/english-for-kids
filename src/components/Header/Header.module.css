@@ -62,7 +62,6 @@
     min-width: 145px;
     text-align: left;
 }
-
 .hiddenMenu {
     display: block;
     position: fixed;
@@ -70,26 +69,28 @@
     padding: 10px;
     margin: 0;
     box-sizing: border-box;
-    width: 340px;
+    width: 300px;
     background: linear-gradient(40deg, #ffd86f, #fc6262);
     height: 100%;
     top: 0;
-    left: -340px;
+    left: -300px;
     transition: left .5s;
     z-index: 2;
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
 }
-
+.hiddenMenu.green {
+    background: linear-gradient(40deg,#00bf82,#0099ae);
+}
 .hiddenMenuTicker {
     display: none;
 }
 .btnMenu {
     color: #fff;
     padding: 5px;
-    position: fixed;
-    top: 45px;
-    left: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     cursor: pointer;
     transition: left .53s;
     z-index: 5;
@@ -115,7 +116,7 @@
 }
 
 .hiddenMenuTicker:checked ~ .btnMenu {
-    left: 300px;
+    left: calc(935px - 50vw)
 }
 
 .hiddenMenuTicker:checked ~ .hiddenMenu {
@@ -245,20 +246,28 @@
     .header {
         max-width: 1000px
     }
+    .hiddenMenuTicker:checked ~ .btnMenu {
+        left: calc(760px - 50vw)
+    }
 }
 
 @media (max-width: 1080px) {
     .header {
         max-width: 650px
     }
-
     .menu {
         left: calc(325px - 50vw);
+    }
+    .hiddenMenuTicker:checked ~ .btnMenu {
+        left: calc(585px - 50vw);;
     }
 }
 
 @media (max-width: 730px) {
     .header {
         max-width: 300px
+    }
+    .hiddenMenuTicker:checked ~ .btnMenu {
+        left: calc(410px - 50vw);;
     }
 }
