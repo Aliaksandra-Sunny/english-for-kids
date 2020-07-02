@@ -14,7 +14,7 @@ class Card extends Component {
     };
 
     componentDidMount() {
-        this.setState({random: this.randomNum()});
+        this.setState({random: this.randomNum(this.state.card.length-1)});
         let audio = new Audio(`${require(`../../audio/${this.state.card[this.state.random].word}.mp3`)}`);
         audio.play()
     };
@@ -32,16 +32,17 @@ class Card extends Component {
         let audio = new Audio(`${require(`../../audio/${this.state.card[this.state.random].word}.mp3`)}`);
         audio.play();
         this.setState({card: this.state.splice(this.state.random, 1)});
-        this.setState({random: this.randomNum()})
+        this.setState({random: this.randomNum(this.state.card.length-1)})
     };
 
-    randomNum = () => {
-        return Math.floor(Math.random() * this.state.card);
+
+    randomNum = (max) => {let rand = 0 - 0.5 + Math.random() * (max - 0 + 1);
+        return Math.round(rand);
     };
 
     onStartGame = () => {
         this.props.startGame();
-        this.setState({random: this.randomNum()}, ()=>{
+        this.setState({random: this.randomNum(this.state.card.length-1)}, () => {
             let audio = new Audio(`${require(`../../audio/${this.state.card[this.state.random].word}.mp3`)}`);
             audio.play()
         });
